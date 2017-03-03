@@ -6,7 +6,7 @@ requirejs.config({
    baseUrl: 'js'
 });
 
-define(['./ajax','../lib/jquery-3.1.0.min'], function (ajax,$) {
+define(['./ajax','../lib/jquery-3.1.0.min'], function (ajax, $) {
 
     // console.log(ajax);
     // console.log($);

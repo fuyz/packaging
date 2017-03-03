@@ -732,7 +732,7 @@ var requirejs, require, define;
 
                 //Do not do more inits if already done. Can happen if there
                 //are multiple define calls for the same module. That is not
-                //a normal, common case, but it is also not unexpected.
+                //a 2.返回promise对象版, common case, but it is also not unexpected.
                 if (this.inited) {
                     return;
                 }
