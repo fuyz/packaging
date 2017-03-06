@@ -1,0 +1,14 @@
+
+
+.toTop{
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    display: none;
+    background: url("../images/toTop.png");
+    width: 39px;
+    height: 143px;
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+}

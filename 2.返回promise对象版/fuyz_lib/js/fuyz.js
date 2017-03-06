@@ -1,3 +1,13 @@
+/*
+* Created by 付颖志 on 2017/3/3.
+* GitHub地址：https://github.com/fuyz/packaging
+*
+* 1.基于JQuery的组件封装
+* 2.相对于normal版；修复了无法在调用请求方法的地方设置请求到的数据 的缺点
+* 3.
+* */
+
+//ajax请求组件
 function ajax(obj) {
 
     obj = obj == undefined ? {} : obj;
@@ -40,8 +50,29 @@ function ajax(obj) {
     });
 
     return promise;
-
 }
+
+//回到顶部组件
+(function () {
+    $('.toTop').click(function () {
+        var scrollTop = $(document).scrollTop();
+
+        var set = setInterval(function () {
+            scrollTop -= 80;
+            if(scrollTop < 50){
+                clearInterval(set);
+            }
+            $(document).scrollTop(scrollTop);
+        },10)
+    });
+    window.onscroll = function () {
+        if($(document).scrollTop() > 50){
+            $('.toTop').slideDown(1000);
+        }else {
+            $('.toTop').hide(500);
+        }
+    }
+})();
 
 
 
